@@ -1,0 +1,21 @@
+/* Foco: manter o layout mobile-first, usando classes do Bootstrap para quase tudo */
+
+/* Gradiente opcional para offcanvas (menu) */
+.offcanvas-start.text-bg-primary {
+  background: linear-gradient(135deg, #0066ff, #0044cc);
+}
+
+/* Ajuste da altura do body pra garantir 100% quando a navbar estiver fixa (opcional) */
+/* body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+} */
+
+/* Ajuste de cor do link no Offcanvas */
+.offcanvas-body .nav-link.text-white:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+}

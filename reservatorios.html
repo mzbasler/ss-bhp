@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Reservatórios - Sistema de Monitoramento</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Leaflet CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"
+      rel="stylesheet"
+    />
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="css/map.css" />
+  </head>
+  <body class="m-0 p-0">
+    <!-- Mapa em tela cheia -->
+    <div id="map"></div>
+
+    <!-- Botão que redireciona para index (Menu) - canto superior esquerdo -->
+    <div
+      class="position-absolute top-0 start-0 mt-3 ms-3"
+      style="z-index: 9999"
+    >
+      <a
+        class="btn btn-light shadow-sm"
+        href="index.html"
+        aria-label="Ir para o menu"
+      >
+        <i class="bi bi-list fs-4"></i>
+      </a>
+    </div>
+
+    <!-- Controles Verticais (lado esquerdo) centralizados -->
+    <div
+      class="position-absolute d-flex flex-column align-items-center gap-2"
+      style="z-index: 9999; top: 50%; left: 1rem; transform: translateY(-50%)"
+    >
+      <!-- Zoom In -->
+      <button class="btn btn-light shadow-sm" id="zoomInBtn" title="Zoom In">
+        <i class="bi bi-plus"></i>
+      </button>
+      <!-- Zoom Out -->
+      <button class="btn btn-light shadow-sm" id="zoomOutBtn" title="Zoom Out">
+        <i class="bi bi-dash"></i>
+      </button>
+      <!-- Home -->
+      <button
+        class="btn btn-light shadow-sm"
+        id="homeBtn"
+        title="Posição Inicial"
+      >
+        <i class="bi bi-house-door"></i>
+      </button>
+      <!-- Layers -->
+      <button class="btn btn-light shadow-sm" id="layersBtn" title="Camadas">
+        <i class="bi bi-layers"></i>
+      </button>
+    </div>
+
+    <!-- Botões de Visualização (canto superior direito) -->
+    <div
+      class="position-absolute top-0 end-0 mt-3 me-3 d-flex flex-column align-items-end"
+      style="z-index: 9999"
+    >
+      <div class="bg-white rounded-3 shadow d-flex align-items-center">
+        <!-- Globo (Mapa) -->
+        <button
+          class="btn border-0 text-secondary px-3 py-2 active"
+          id="globeViewBtn"
+          title="Mapa"
+        >
+          <i class="bi bi-globe fs-5"></i>
+        </button>
+        <!-- Tabela -->
+        <button
+          class="btn border-0 text-secondary px-3 py-2"
+          id="tableViewBtn"
+          title="Tabela"
+        >
+          <i class="bi bi-table fs-5"></i>
+        </button>
+        <!-- Gráfico -->
+        <button
+          class="btn border-0 text-secondary px-3 py-2"
+          id="chartViewBtn"
+          title="Gráfico"
+        >
+          <i class="bi bi-graph-up fs-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Botões Flutuantes no Canto Inferior Direito (Filtro/Reset) -->
+    <div class="bottom-right-buttons">
+      <!-- Botão Filtro -->
+      <button
+        class="btn btn-primary shadow rounded-circle"
+        id="filterBtn"
+        title="Filtrar"
+      >
+        <i class="bi bi-funnel fs-4"></i>
+      </button>
+      <!-- Botão Reset -->
+      <button
+        class="btn btn-danger shadow rounded-circle"
+        id="resetBtn"
+        title="Resetar"
+      >
+        <i class="bi bi-trash fs-4"></i>
+      </button>
+    </div>
+
+    <!-- Rodapé (Escala, Coordenadas, Fonte) -->
+    <div
+      class="position-absolute start-0 end-0 p-2 d-flex justify-content-between align-items-center map-footer"
+    >
+      <div>
+        <span id="scaleLabel" class="fw-bold">200</span>
+        <small class="fw-bold">km</small>
+      </div>
+      <div class="d-flex flex-column text-end">
+        <span id="coordinates-lng">-44.154053</span>
+        <span id="coordinates-lat">-25.463115</span>
+      </div>
+      <div>
+        <span>Fonte: ANA - </span>
+        <a
+          href="https://www.ana.gov.br/sar/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://www.ana.gov.br/sar/
+        </a>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/reservatorios.js"></script>
+  </body>
+</html>

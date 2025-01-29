@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>Menu Principal</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons (opcional) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <!-- Container principal (sem vh-100) para permitir rolagem em telas muito altas/estreitas -->
+    <div class="container py-5">
+      <!-- Logo centralizada -->
+      <div class="text-center mb-4">
+        <img
+          src="assets/img/logo.svg"
+          alt="Logo"
+          class="img-fluid"
+          style="max-width: 150px"
+        />
+      </div>
+
+      <!-- Grade de opções -->
+      <!-- Usando col-12 no XS, col-sm-6 no SM, col-md-4 no MD, col-lg-3 no LG, etc. -->
+      <div class="row g-3 justify-content-center text-center">
+        <!-- Reservatórios -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <a
+            href="reservatorios.html"
+            class="btn btn-light p-4 w-100 d-flex flex-column align-items-center justify-content-center shadow"
+            style="border-radius: 1rem"
+          >
+            <i class="bi bi-water fs-1"></i>
+            <span class="mt-2 fw-semibold">Reservatórios</span>
+          </a>
+        </div>
+
+        <!-- Estação Fluviométricas -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <button
+            class="btn btn-light p-4 w-100 d-flex flex-column align-items-center justify-content-center shadow"
+            style="border-radius: 1rem"
+          >
+            <i class="bi bi-droplet fs-1"></i>
+            <span class="mt-2 fw-semibold">Estação Fluviométricas</span>
+          </button>
+        </div>
+
+        <!-- Previsão do Tempo e Precipitação -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <button
+            class="btn btn-light p-4 w-100 d-flex flex-column align-items-center justify-content-center shadow"
+            style="border-radius: 1rem"
+          >
+            <i class="bi bi-cloud-sun fs-1"></i>
+            <span class="mt-2 fw-semibold"
+              >Previsão do Tempo e Precipitação</span
+            >
+          </button>
+        </div>
+
+        <!-- Demanda Hídrica -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <button
+            class="btn btn-light p-4 w-100 d-flex flex-column align-items-center justify-content-center shadow"
+            style="border-radius: 1rem"
+          >
+            <i class="bi bi-graph-up fs-1"></i>
+            <span class="mt-2 fw-semibold">Demanda Hídrica</span>
+          </button>
+        </div>
+
+        <!-- Balanço Hídrico -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <button
+            class="btn btn-light p-4 w-100 d-flex flex-column align-items-center justify-content-center shadow"
+            style="border-radius: 1rem"
+          >
+            <i class="bi bi-bar-chart fs-1"></i>
+            <span class="mt-2 fw-semibold">Balanço Hídrico</span>
+          </button>
+        </div>
+
+        <!-- Índice de Seca -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <button
+            class="btn btn-light p-4 w-100 d-flex flex-column align-items-center justify-content-center shadow"
+            style="border-radius: 1rem"
+          >
+            <i class="bi bi-thermometer-sun fs-1"></i>
+            <span class="mt-2 fw-semibold">Índice de Seca</span>
+          </button>
+        </div>
+
+        <!-- Queimadas -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <button
+            class="btn btn-light p-4 w-100 d-flex flex-column align-items-center justify-content-center shadow"
+            style="border-radius: 1rem"
+          >
+            <i class="bi bi-fire fs-1"></i>
+            <span class="mt-2 fw-semibold">Queimadas</span>
+          </button>
+        </div>
+
+        <!-- Boletins -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <button
+            class="btn btn-light p-4 w-100 d-flex flex-column align-items-center justify-content-center shadow"
+            style="border-radius: 1rem"
+          >
+            <i class="bi bi-journal-text fs-1"></i>
+            <span class="mt-2 fw-semibold">Boletins</span>
+          </button>
+        </div>
+
+        <!-- Links Úteis -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <button
+            class="btn btn-light p-4 w-100 d-flex flex-column align-items-center justify-content-center shadow"
+            style="border-radius: 1rem"
+          >
+            <i class="bi bi-link-45deg fs-1"></i>
+            <span class="mt-2 fw-semibold">Links Úteis</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts Bootstrap (se precisar) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
