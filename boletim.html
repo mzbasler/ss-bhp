@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Sala de Situação</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .sidebar {
+        width: 250px;
+        background: #f8f9fa;
+        height: 100vh;
+        padding: 20px;
+        position: fixed;
+        left: 0;
+        top: 0;
+        transition: transform 0.3s ease-in-out;
+        z-index: 1050;
+      }
+      .content {
+        margin-left: 270px;
+        padding: 20px;
+        transition: margin-left 0.3s ease-in-out;
+      }
+      .toggle-btn {
+        position: fixed;
+        left: 10px;
+        top: 15px;
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        z-index: 1100;
+        display: none;
+      }
+      @media (max-width: 768px) {
+        .sidebar {
+          transform: translateX(-100%);
+        }
+        .sidebar.show {
+          transform: translateX(0);
+        }
+        .content {
+          margin-left: 0;
+          padding-top: 60px;
+        }
+        .toggle-btn {
+          display: block;
+        }
+        .sidebar h4 {
+          margin-top: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <div class="sidebar border" id="sidebar">
+      <h4>Menu</h4>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a href="/boletim.html" class="nav-link">Boletins</a>
+        </li>
+        <li class="nav-item">
+          <a href="/boletimDiario.html" class="nav-link">Boletins Diários</a>
+        </li>
+        <li class="nav-item">
+          <a href="/boletimMensal.html" class="nav-link">Boletins Mensais</a>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <p class="h3 mb-4 fw-bold text-center">Visão Geral</p>
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-12 col-md-6 mb-4">
+              <p class="mb-4 h4 fw-bold text-center">
+                Boletins Diários Recentes
+              </p>
+              <div class="table-responsive">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>12/02/2025</td>
+                      <td class="text-end">
+                        <button class="btn fw-bold btn-outline-primary">
+                          Baixar
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>11/02/2025</td>
+                      <td class="text-end">
+                        <button class="btn fw-bold btn-outline-primary">
+                          Baixar
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>10/02/2025</td>
+                      <td class="text-end">
+                        <button class="btn fw-bold btn-outline-primary">
+                          Baixar
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>09/02/2025</td>
+                      <td class="text-end">
+                        <button class="btn fw-bold btn-outline-primary">
+                          Baixar
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>08/02/2025</td>
+                      <td class="text-end">
+                        <button class="btn fw-bold btn-outline-primary">
+                          Baixar
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a
+                href="/boletimDiario.html"
+                data-link
+                class="btn fw-bold btn-outline-primary w-100"
+              >
+                + Boletins Diários
+              </a>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <p class="mb-4 h4 fw-bold text-center">
+                Boletins Mensais Recentes
+              </p>
+              <div class="table-responsive">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>Janeiro/2025</td>
+                      <td class="text-end">
+                        <button class="btn btn-outline-success fw-bold">
+                          Baixar
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Dezembro/2024</td>
+                      <td class="text-end">
+                        <button class="btn btn-outline-success fw-bold">
+                          Baixar
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Novembro/2024</td>
+                      <td class="text-end">
+                        <button class="btn btn-outline-success fw-bold">
+                          Baixar
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Outubro/2024</td>
+                      <td class="text-end">
+                        <button class="btn btn-outline-success fw-bold">
+                          Baixar
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Setembro/2024</td>
+                      <td class="text-end">
+                        <button class="btn btn-outline-success fw-bold">
+                          Baixar
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a
+                href="/boletimMensal.html"
+                data-link
+                class="btn fw-bold btn-outline-success w-100"
+              >
+                + Boletins Mensais
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("show");
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
